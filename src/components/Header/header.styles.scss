@@ -1,0 +1,19 @@
+header {
+  border-bottom: 1px solid #eee;
+  .header_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 0;
+
+    .logo_container {
+      font-size: 2rem;
+    }
+
+    .nav_links {
+      .link {
+        padding: 0 2rem;
+      }
+    }
+  }
+}
