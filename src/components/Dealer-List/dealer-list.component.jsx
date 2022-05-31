@@ -104,7 +104,7 @@ export const DealerList = () => {
               <div className="table-cell">{dealer.quantity}</div>
               <div className="table-cell">${dealer.total}</div>
               <div className="table-cell">${dealer.remaining}</div>
-              <div className="table-cell">
+              <div className="table-cell action-btn-wrapper">
                 <button className="view btn">
                   <Link to={`/dealer/${dealer._id}`}>View</Link>
                 </button>

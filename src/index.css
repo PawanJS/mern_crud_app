@@ -49,3 +49,18 @@ a {
 .btn:hover {
   opacity: 0.8;
 }
+
+@media screen and (max-width: 590px) {
+  html {
+    font-size: 50%;
+  }
+
+  .btn {
+    padding: 0.6rem;
+    font-size: 12px;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+}

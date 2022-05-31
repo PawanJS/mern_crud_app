@@ -132,7 +132,7 @@ export const CarList = () => {
                 <div className="table-cell">{car.model}</div>
                 <div className="table-cell">${car.color}</div>
                 <div className="table-cell">${car.price}</div>
-                <div className="table-cell">
+                <div className="table-cell action-btn-wrapper">
                   <button
                     className="edit btn"
                     onClick={(event) => {

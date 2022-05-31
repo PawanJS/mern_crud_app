@@ -8,6 +8,11 @@ $main-color: black;
   justify-content: space-between;
   flex-wrap: wrap;
 
+  @media screen and(max-width:590px) {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
   .form-input {
     background: none;
     background-color: white;
@@ -20,6 +25,11 @@ $main-color: black;
     width: 100%;
     border: 1px solid $sub-color;
     margin: 10px 0;
+
+    @media screen and(max-width:590px) {
+      max-width: 100%;
+      box-sizing: border-box;
+    }
 
     &:focus {
       outline: none;
