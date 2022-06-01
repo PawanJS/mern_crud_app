@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 
 import { DealerForm } from '../Dealer-form/dealer-form.component';
 import { DealerEditForm } from '../Dealer-edit-form/dealer-edit-form.component';
+import viewIcon from '../../assets/eye.svg';
+import editIcon from '../../assets/edit-2.svg';
+import deleteIcon from '../../assets/trash.svg';
 
 import './dealer-list.styles.scss';
 
@@ -106,7 +109,10 @@ export const DealerList = () => {
               <div className="table-cell">${dealer.remaining}</div>
               <div className="table-cell action-btn-wrapper">
                 <button className="view btn">
-                  <Link to={`/dealer/${dealer._id}`}>View</Link>
+                  <Link to={`/dealer/${dealer._id}`}>
+                    <img className="icon" src={viewIcon} alt="View Icon" />
+                    View
+                  </Link>
                 </button>
                 <button
                   className="edit btn"
@@ -117,6 +123,7 @@ export const DealerList = () => {
                   }}
                   data-id={dealer._id}
                 >
+                  <img className="icon" src={editIcon} alt="Edit Icon" />
                   Edit
                 </button>
                 <button
@@ -124,6 +131,7 @@ export const DealerList = () => {
                   onClick={handleDelete}
                   data-id={dealer._id}
                 >
+                  <img className="icon" src={deleteIcon} alt="Delete Icon" />
                   Delete
                 </button>
               </div>

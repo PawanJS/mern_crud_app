@@ -51,12 +51,22 @@
       padding: 1em;
       border: #f0f0f0 1px solid;
     }
+    .table-cell.action-btn-wrapper {
+      display: flex;
+
+      .btn,
+      a {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+      }
+    }
 
     @media screen and(max-width:890px) {
       .table-cell.action-btn-wrapper {
-        display: flex;
         flex-direction: column;
         gap: 1rem;
+        align-items: center;
       }
 
       .table-row .table-cell {

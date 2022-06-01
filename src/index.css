@@ -36,6 +36,11 @@ a {
   color: rgb(31, 29, 29);
 }
 
+.icon {
+  filter: brightness(0) invert(1);
+  width: 1.5rem;
+}
+
 .btn {
   display: inline-block;
   color: #fff;

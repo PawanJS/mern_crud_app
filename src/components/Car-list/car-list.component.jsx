@@ -4,6 +4,8 @@ import { Link, useParams } from 'react-router-dom';
 
 import { CarForm } from '../Car-form/car-form.component';
 import { CarEditForm } from '../Car-edit-form/car-edit-form.component';
+import editIcon from '../../assets/edit-2.svg';
+import deleteIcon from '../../assets/trash.svg';
 
 import './car-list.styles.scss';
 
@@ -142,6 +144,7 @@ export const CarList = () => {
                     }}
                     data-id={car._id}
                   >
+                    <img className="icon" src={editIcon} alt="Edit Icon" />
                     Edit
                   </button>
                   <button
@@ -149,6 +152,7 @@ export const CarList = () => {
                     onClick={handleDelete}
                     data-id={car._id}
                   >
+                    <img className="icon" src={deleteIcon} alt="Delete Icon" />
                     Delete
                   </button>
                 </div>
