@@ -112,9 +112,9 @@ export const CarList = () => {
             <button className="btn add-dealer" onClick={openDealerForm}>
               + Add Car
             </button>
-            <button className="btn add-dealer">
-              <Link to="/">Back</Link>
-            </button>
+            <Link to="/">
+              <button className="btn add-dealer">Back</button>
+            </Link>
           </div>
         </div>
         {newCarData.length > 0 ? (
