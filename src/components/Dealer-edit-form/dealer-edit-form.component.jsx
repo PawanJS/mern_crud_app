@@ -6,12 +6,7 @@ import closeIcon from '../../assets/closeIcon.svg';
 
 import '../Dealer-form/dealer-form.styles.scss';
 
-export const DealerEditForm = ({
-  showEdit,
-  id,
-  setShowEdit,
-  setDealerData,
-}) => {
+export const DealerEditForm = ({ showEdit, id, setShowEdit }) => {
   const [formValues, setFormValues] = useState({
     name: '',
     quantity: '',

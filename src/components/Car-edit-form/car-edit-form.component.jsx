@@ -6,13 +6,8 @@ import closeIcon from '../../assets/closeIcon.svg';
 
 import '../Car-form/car-form.styles.scss';
 
-export const CarEditForm = ({
-  showEdit,
-  id,
-  setShowEdit,
-  setDealerData,
-  setCarData,
-}) => {
+export const CarEditForm = ({ showEdit, id, setShowEdit }) => {
+  // Setting initial state of form
   const [formValues, setFormValues] = useState({
     dealer: '',
     brand: '',
@@ -21,6 +16,7 @@ export const CarEditForm = ({
     price: '',
   });
 
+  // Fetching details for edit the data
   useEffect(() => {
     const url = `${
       process.env.NODE_ENV !== 'production'
@@ -48,6 +44,7 @@ export const CarEditForm = ({
     fetchData();
   }, [id]);
 
+  // Form operations closing, changing values and submitting
   const closeDealerForm = () => {
     setShowEdit(false);
     document.body.style.overflow = 'auto';

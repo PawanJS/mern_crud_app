@@ -42,7 +42,7 @@ export const CarList = () => {
     };
 
     fetchData();
-  }, [show, showEdit]);
+  }, [show, showEdit, id]);
 
   useEffect(() => {
     const url = `${
@@ -63,7 +63,7 @@ export const CarList = () => {
     };
 
     fetchData();
-  }, [show, showEdit]);
+  }, [show, showEdit, id]);
 
   const handleEdit = (event) => {
     const carId = event.target.getAttribute('data-id');
@@ -92,6 +92,7 @@ export const CarList = () => {
     setSearchText(event.target.value);
   };
 
+  // Setting filtered data to state
   const newCarData = carData.filter((car) =>
     car.brand.toLowerCase().includes(searchText.toLowerCase())
   );

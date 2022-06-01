@@ -17,12 +17,6 @@ export const DealerList = () => {
   const [id, setId] = useState();
   const [searchText, setSearchText] = useState('');
 
-  const openDealerForm = () => {
-    setShow(true);
-
-    document.body.style.overflow = 'hidden';
-  };
-
   useEffect(() => {
     const url = `${
       process.env.NODE_ENV !== 'production'
@@ -41,6 +35,11 @@ export const DealerList = () => {
 
     fetchData();
   }, [show, showEdit]);
+
+  const openDealerForm = () => {
+    setShow(true);
+    document.body.style.overflow = 'hidden';
+  };
 
   const handleEdit = (event) => {
     const dealerId = event.target.getAttribute('data-id');
@@ -71,6 +70,7 @@ export const DealerList = () => {
     setSearchText(event.target.value);
   };
 
+  // Setting filtered data to state
   const newDealerData = dealerData.filter((dealer) =>
     dealer.name.toLowerCase().includes(searchText.toLowerCase())
   );
