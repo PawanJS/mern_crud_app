@@ -130,7 +130,7 @@ export const CarList = () => {
                 <div className="table-cell">{index + 1}</div>
                 <div className="table-cell">{car.brand}</div>
                 <div className="table-cell">{car.model}</div>
-                <div className="table-cell">${car.color}</div>
+                <div className="table-cell">{car.color}</div>
                 <div className="table-cell">${car.price}</div>
                 <div className="table-cell action-btn-wrapper">
                   <button

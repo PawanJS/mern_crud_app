@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { Links } from '../../data/nav-links/links';
+import logo from '../../assets/logo.png';
 
 import './header.styles.scss';
 
@@ -11,7 +12,9 @@ export const Header = () => {
       <div className="container">
         <div className="header_wrapper">
           <div className="logo_container">
-            <Link to="/">LOGO</Link>
+            <Link to="/">
+              <img src={logo} alt="Logo" width="80" />
+            </Link>
           </div>
           <div className="nav_links">
             {Links.map((link) => (
