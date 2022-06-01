@@ -108,12 +108,12 @@ export const DealerList = () => {
               <div className="table-cell">${dealer.total}</div>
               <div className="table-cell">${dealer.remaining}</div>
               <div className="table-cell action-btn-wrapper">
-                <button className="view btn">
-                  <Link to={`/dealer/${dealer._id}`}>
+                <Link to={`/dealer/${dealer._id}`}>
+                  <button className="view btn">
                     <img className="icon" src={viewIcon} alt="View Icon" />
                     View
-                  </Link>
-                </button>
+                  </button>
+                </Link>
                 <button
                   className="edit btn"
                   onClick={(event) => {
